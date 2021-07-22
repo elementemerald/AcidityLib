@@ -66,6 +66,17 @@ function library:Window(name)
             end;
         end);
     end));
+
+    local WindowFields = {};
+    WindowFields.Instance = LibUIWindow;
+
+    function WindowFields:Tab(name)
+        local LibUIWindowTab = Instance.new("Frame");
+        LibUIWindowTab.Name = "ACIDITYLIB_TAB_" ..name;
+        LibUIWindowTab.BorderSizePixel = 0;
+    end;
+
+    return WindowFields;
 end;
 
 return library;
